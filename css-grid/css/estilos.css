@@ -1,0 +1,39 @@
+/*Este ejercicio muestra CSS Grid para todos los navegadores con excepcion a IE y es por eso que estan separados pero esto
+ es para que no se vea diferente en IE utilizando CSS Grid*/
+.super-container{
+	margin: 2em auto;
+	width: 90%;
+	border: 2px solid red;
+}
+
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	margin: -5px;
+}
+
+p{
+	background: yellow;
+	width: calc(25% - 10px);
+	margin: 5px;
+}
+
+body{
+	overflow-x: hidden;
+}
+
+/* VERSION CSS GRID */
+/*Supports: es para preguntar a IE si soporta CSS Grid sino no va mostrar algun cambio*/
+@supports (grid-template-columns: initial){
+	.container{
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+		grid-gap: 10px;
+		margin: 0;
+	}
+
+	p{
+		margin: 0;
+		width: 100%;
+	}
+}
