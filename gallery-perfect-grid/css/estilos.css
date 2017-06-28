@@ -1,0 +1,24 @@
+h1 {
+  text-align: center;
+}
+
+.gallery {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+.gallery__item {
+  height: 200px;
+}
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
