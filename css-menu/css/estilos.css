@@ -1,0 +1,249 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body { overflow-x: hidden; }
+
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 997;
+    width: 100%;
+    height: 4rem;
+    background-color: #222;
+    color: #FFF;
+}
+
+.Header-container {
+    margin: auto;
+    max-width: 1200px;
+}
+
+.Logo {
+    position: relative;
+    z-index: 998;
+    width: 100%;
+    height: 4rem;
+    background-color: #222;
+}
+
+.Logo-link {
+    display: block;
+    width: 4rem;
+    height: inherit;
+    text-indent: -9999px;
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 3.5rem;
+}
+
+.Panel {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    z-index: 996;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #222;
+    transition: all .3s ease-out;
+    transform: translateY(-100vh);
+}
+
+.Panel.is-active {
+    padding-bottom: 4rem;
+    max-height: 100vh;
+    overflow-y: auto;
+    transform: translateY(0);
+}
+
+.Panel-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 999;
+    display: block;
+    width: 3rem;
+    height: .65rem;
+    padding: 1rem;
+    font-size: 1rem;
+    text-indent: 9999px;
+}
+
+.Panel-button:before {
+    content: '';
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 1em;
+    height: .15em;
+    display: block;
+    font-size: 3em;
+    background-color: #fff;
+    border-radius: .15em;
+    box-shadow: 
+        0 .25em 0 #fff,
+        0 .5em 0 #fff;
+    transition: all .3s ease-out;
+}
+
+.Panel-button:hover:before {
+    background-color: #FFF;
+    border-radius: 0;
+    box-shadow:
+        0 .25em 0 #FFF,
+        0 .5em 0 #FFF;
+    transform: skew(-20deg) rotate(360deg);
+}
+
+.Menu { width: 100%; }
+
+.Menu-listItem {
+    border-top: thin solid #fff;
+    text-align: center;
+}
+
+.Menu-item {
+    display: block;
+    margin: 0;
+    border-bottom: thin solid #fff;
+    list-style-type: none;
+}
+
+.Menu-link {
+    display: block;
+    padding: 1rem;
+    font-weight: bold;
+    color: #fff;
+    transition: all .3s ease-out;
+}
+
+.Menu-link:hover {
+    background-color: #fff;
+    color: #FFF;
+}
+
+.Main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 1rem 1rem;
+    background-color: #EEE; 
+}
+
+@media screen and (min-width: 64em) {
+    .Header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Logo {
+        width: 10%;
+        flex: none;
+        background-color: transparent;
+    }
+
+    .Panel {
+        position: static;
+        top: 0;
+        flex: none;
+        width: 90%;
+        max-height: none;
+        overflow: visible;
+        background-color: transparent;
+        transition: none;
+        transform: translateY(0);
+    }
+
+    .Panel-button { display: none; }
+
+    .Menu-listItem {
+        border: 0;
+        text-align: right;
+    }
+
+    .Menu-item {
+        display: inline;
+        border: 0;
+    }
+
+    .Menu-link { display: inline; }
+
+    .Menu-link:hover { background-color: transparent; }
+}
+.Card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+    max-width: 768px;
+    font-family: 'Raleway';
+    background-color: #222;
+    color: #fff;
+}
+
+.Card > * {
+    padding: 1rem;
+    flex: auto;
+    width: 100%;
+}
+
+.Card-image {
+    display: block;
+    margin: auto;
+    max-width: 256px;
+    max-height: 256px;
+    border-radius: 100%;
+    transition: all .3s ease-in-out;
+}
+
+.Card-image:hover {
+    transform: rotate(360deg) scale(.75);
+    filter: grayscale(1);
+}
+
+.Card-data {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.Card-name > * {
+    display: block;
+    padding: .5rem;
+    font-weight: bold;
+}
+
+.Card-socialMedia {
+    margin-top: .5rem;
+}
+
+.Card-link {
+    padding: .5rem;
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s ease-in;
+}
+
+.Card-link:hover {
+    color: #FFF;
+    opacity: .5;
+}
+
+@media screen and (min-width:48em) {
+    .Card > * {
+        width: 50%;
+    }
+}
