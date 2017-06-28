@@ -1,0 +1,331 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+.keypad {
+  width: 30em;
+  height: 17em;
+  background: -webkit-linear-gradient(#fafafa, #f0f0f0);
+  background: linear-gradient(#fafafa, #f0f0f0);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5em;
+  position: relative;
+  box-shadow: 0 5px 7px -5px rgba(0, 0, 0, 0.8);
+  border-top: 1px solid #c9c9c9;
+  border-bottom: 1px solid #969696;
+}
+.keypad__inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(#fafafa, #d9d9d9);
+  background: linear-gradient(#fafafa, #d9d9d9);
+  z-index: 200;
+}
+.keypad::before, .keypad::after {
+  width: 20em;
+  height: 20em;
+  content: '';
+  display: block;
+  background: -webkit-linear-gradient(#fafafa, #d4d4d4);
+  background: linear-gradient(#fafafa, #d4d4d4);
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 6px 6px -4px rgba(0, 0, 0, 0.5), 0 0 0 1px #c9c9c9;
+}
+.keypad::before {
+  left: -10em;
+}
+.keypad::after {
+  right: -10em;
+}
+.keypad__title {
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.6em;
+  -webkit-transform: skew(-8deg);
+          transform: skew(-8deg);
+  font-weight: bold;
+  color: rgba(59, 59, 59, 0.9);
+  padding-top: .5em;
+  margin-bottom: -.15em;
+}
+.keypad__subtitle {
+  background: #3B3B3B;
+  color: #fafafa;
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transform: skew(-5deg);
+          transform: skew(-5deg);
+  padding: 0 0 0 .2em;
+  letter-spacing: .3em;
+}
+
+.central-button {
+  width: 2.85714em;
+  height: 0.83333em;
+  background: -webkit-radial-gradient(#7b7b7b, #222222);
+  background: radial-gradient(#7b7b7b, #222222);
+  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6) inset, 0 1px 1px rgba(255, 255, 255, 0.2) inset;
+  border-radius: 6.66667em;
+  position: relative;
+}
+.central-button-container {
+  position: absolute;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  bottom: 1.11111em;
+  left: 11.6em;
+}
+.central-button-container.start {
+  left: 16em;
+}
+.central-button-container p {
+  margin: 0;
+  -webkit-transform: rotate(40deg) skew(-5deg) translateX(-1em);
+          transform: rotate(40deg) skew(-5deg) translateX(-1em);
+  padding-top: 1.5em;
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+  font-size: .9em;
+  letter-spacing: 0.1em;
+}
+.central-button::before {
+  content: '';
+  position: absolute;
+  width: 104%;
+  height: 110%;
+  background: -webkit-linear-gradient(left, white, #969696);
+  background: linear-gradient(to right, white, #969696);
+  z-index: -1;
+  top: -5%;
+  left: -2%;
+  border-radius: 20em;
+  box-shadow: 0 0 0 0.04em #969696;
+}
+
+.pad-right {
+  width: 18em;
+  height: 18em;
+  background: -webkit-linear-gradient(#bcbcbc, #707070);
+  background: linear-gradient(#bcbcbc, #707070);
+  position: absolute;
+  z-index: 500;
+  right: -9em;
+  top: 1em;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #d6d6d6;
+}
+
+.pad-left {
+  width: 12em;
+  height: 12em;
+  position: absolute;
+  border-radius: 50%;
+  left: -6em;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 500;
+  top: 4em;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset, 0 -1px 1px #fff inset;
+  border: 1px solid rgba(150, 150, 150, 0.2);
+}
+
+.cross-x,
+.cross-y {
+  position: absolute;
+  width: 80%;
+  height: 25%;
+  background: #3B3B3B;
+  top: 37.5%;
+  left: 10%;
+  border-radius: 5px;
+  opacity: .97;
+}
+.cross-x::before, .cross-x::after,
+.cross-y::before,
+.cross-y::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-width: 1em 1.8em;
+  border-color: transparent transparent transparent white;
+  border-style: solid;
+  position: absolute;
+  opacity: .15;
+  top: .5em;
+}
+.cross-x::before,
+.cross-y::before {
+  right: -1.2em;
+}
+.cross-x::after,
+.cross-y::after {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  left: -1.2em;
+}
+
+.cross-y {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  box-shadow: 2px 0 2px -1px rgba(0, 0, 0, 0.9);
+}
+
+.cross-x {
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.8);
+}
+
+.cross-middle {
+  position: absolute;
+  width: 16%;
+  height: 16%;
+  background: -webkit-radial-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+  background: radial-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+  top: 42%;
+  left: 42%;
+  border-radius: 50%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+}
+
+.circular-button {
+  height: 2.85714em;
+  width: 2.85714em;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0.1em 2px rgba(255, 255, 255, 0.2) inset, 0 -1px 2px rgba(0, 0, 0, 0.2) inset, 0 0 0 1px #3B3B3B;
+  z-index: 500;
+}
+
+.a-button {
+  background: -webkit-linear-gradient(#BF2231 10%, #7e1620 90%);
+  background: linear-gradient(#BF2231 10%, #7e1620 90%);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 20%;
+}
+
+.b-button {
+  background: -webkit-linear-gradient(#FFDC00 10%, #b39a00 90%);
+  background: linear-gradient(#FFDC00 10%, #b39a00 90%);
+  bottom: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.x-button {
+  background: -webkit-linear-gradient(#3355FF 10%, #0026e6 90%);
+  background: linear-gradient(#3355FF 10%, #0026e6 90%);
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.y-button {
+  background: -webkit-linear-gradient(#189629 10%, #0d5417 90%);
+  background: linear-gradient(#189629 10%, #0d5417 90%);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 20%;
+}
+
+.circular-button-container {
+  background: -webkit-linear-gradient(#fafafa, #c9c9c9);
+  background: linear-gradient(#fafafa, #c9c9c9);
+  width: 55%;
+  height: 22%;
+  border-radius: 5em;
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.circular-button-container::before, .circular-button-container::after {
+  -webkit-transform: rotate(45deg) skew(5deg);
+          transform: rotate(45deg) skew(5deg);
+  display: block;
+  font-family: sans-serif;
+  color: #fff;
+  position: absolute;
+  font-size: 1.5em;
+}
+
+.xy-container {
+  top: 5em;
+  left: 2.1em;
+}
+.xy-container::before {
+  content: "Y";
+  top: .5em;
+  left: -1.2em;
+}
+.xy-container::after {
+  content: "X";
+  top: 1em;
+  left: 7em;
+}
+
+.ab-container {
+  top: 9em;
+  left: 6em;
+}
+.ab-container::before {
+  content: "A";
+  top: 1em;
+  left: 7em;
+}
+.ab-container::after {
+  content: "B";
+  left: -1.1em;
+  top: .5em;
+}
+
+.top-button {
+  width: 10em;
+  height: 2em;
+  position: absolute;
+  background: #efefef;
+  border: 1px solid rgba(150, 150, 150, 0.5);
+  top: -.5em;
+  z-index: -1;
+  box-shadow: 0 2px 1px #fff inset;
+}
+
+.l-button {
+  left: -3em;
+  border-top-left-radius: 60px 10px;
+  border-top-right-radius: 5px;
+}
+
+.r-button {
+  right: -3em;
+  border-top-right-radius: 60px 10px;
+  border-top-left-radius: 5px;
+}
+
+.wire {
+  width: 1.5em;
+  height: 10em;
+  position: absolute;
+  background: -webkit-linear-gradient(right, #3B3B3B 10%, #6e6e6e 40%, #3B3B3B 80%);
+  background: linear-gradient(to left, #3B3B3B 10%, #6e6e6e 40%, #3B3B3B 80%);
+  top: -10em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
