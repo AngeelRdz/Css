@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background: #1ae65e;
+}
+
+footer {
+  background: #e6801a;
+}
+
+aside {
+  background: #1ae6c4;
+}
+
+main {
+  background: #e6e61a;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 6fr 2fr;
+      grid-template-columns: 2fr 6fr 2fr;
+  -ms-grid-rows: 100px 1fr 100px;
+      grid-template-rows: 100px 1fr 100px;
+  grid-template-areas: "header header header"  "aside1 main aside2"  "footer footer footer";
+  grid-gap: 10px;
+}
+
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+}
+
+main {
+  grid-area: main;
+}
+
+aside:first-of-type {
+  grid-area: aside1;
+}
