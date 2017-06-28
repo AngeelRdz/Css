@@ -1,0 +1,29 @@
+.caja {
+  width: 200px;
+  height: 500px;
+  
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  background: yellow url(../img/shoes.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;  
+  
+  animation: slider 10s infinite alternate;
+}
+
+@keyframes slider{
+  from {
+    background-size: 1000px;
+    background-position: left center;
+  }
+  
+  to {
+    background-position: right center;
+    background-size: 1920px;
+  }
+}

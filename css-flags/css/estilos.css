@@ -1,0 +1,342 @@
+body {
+  background: #222228;
+  font-size: 40px;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: sans-serif;
+  color: #eee;
+  font-size: .6em;
+}
+h1 a, h2 a {
+  color: #eee;
+}
+
+.flags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flag {
+  width: 1.6em;
+  height: 1em;
+  background: #eee;
+  margin: .5em;
+  flex: none;
+  position: relative;
+}
+
+.spain {
+  box-shadow: 0 .33em red inset, 0 .69em yellow inset, 0 1em red inset;
+}
+
+.peru {
+  box-shadow: .53em 0 red inset, 1.06em 0 white inset, 1.6em 0 red inset;
+}
+
+.usa {
+  box-shadow: 0 .111em red inset, 0 .222em white inset, 0 .333em red inset, 0 .444em white inset, 0 .555em red inset, 0 .666em white inset, 0 .777em red inset, 0 .88em white inset, 0 1em red inset;
+}
+.usa:before {
+  top: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+  background: blue;
+  width: .8em;
+  height: .55em;
+}
+.usa:after {
+  content: "\2605";
+  position: absolute;
+  font-size: .15em;
+  color: #fff;
+  top: .2em;
+  left: .2em;
+  line-height: 1;
+  text-shadow: 1em 0, 2em 0, 3em 0, 4em 0, 0 1em, 1em 1em, 2em 1em, 3em 1em, 4em 1em, 0 2em, 1em 2em, 2em 2em, 3em 2em, 4em 2em;
+}
+
+.chile {
+  box-shadow: 0 .5em white inset, 0 1em red inset;
+}
+.chile:before {
+  content: "";
+  color: #fff;
+  background: blue;
+  width: .5em;
+  height: .5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+}
+.chile:after {
+  content: "\2605";
+  color: #fff;
+  position: absolute;
+  font-size: .4em;
+  left: .2em;
+  top: .1em;
+  line-height: 1;
+}
+
+.bolivia {
+  box-shadow: 0 .33em #D81E05 inset, 0 .69em #F8E213 inset, 0 1em #007A3D inset;
+}
+
+.argentina {
+  box-shadow: 0 .33em #75AADB inset, 0 .69em white inset, 0 1em #75AADB inset;
+}
+
+.uruguay {
+  box-shadow: 0 .142em #0635A9 inset, 0 .284em white inset, 0 .426em #0635A9 inset, 0 .568em white inset, 0 .710em #0635A9 inset, 0 .852em white inset, 0 1em #0635A9 inset;
+}
+.uruguay:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: white;
+  height: .5em;
+  width: .8em;
+}
+.uruguay:after {
+  content: "\2600";
+  color: yellow;
+  font-size: .5em;
+  position: absolute;
+  top: .1em;
+  left: .35em;
+  line-height: 1;
+}
+
+.paraguay {
+  box-shadow: 0 .33em #CE1127 inset, 0 .69em white inset, 0 1em #0038A7 inset;
+}
+
+.brasil {
+  background: #00923F;
+}
+.brasil:after {
+  position: absolute;
+  content: "";
+  width: .6em;
+  height: .5em;
+  background: yellow;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg) skew(32deg) scale(1.3);
+}
+.brasil:before {
+  content: "";
+  width: .4em;
+  height: .4em;
+  background: #0038A7;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.colombia {
+  box-shadow: 0 .5em #FCD116 inset, 0 .75em #003893 inset, 0 1em #CE1126 inset;
+}
+
+.venezuela {
+  box-shadow: 0 .33em #FEFF41 inset, 0 .66em #00006A inset, 0 1em #DC0000 inset;
+}
+
+.mexico {
+  box-shadow: .53em 0 #016948 inset, 1.06em 0 white inset, 1.6em 0 #CE1127 inset;
+}
+
+.panama {
+  background: #fff;
+}
+.panama:before {
+  content: "";
+  width: .8em;
+  height: .5em;
+  background: #0067C6;
+  position: absolute;
+  top: .5em;
+  left: 0;
+  box-shadow: .8em -.5em #D21034;
+}
+.panama:after {
+  content: "\2605";
+  color: #0067C6;
+  position: absolute;
+  top: .1em;
+  left: .5em;
+  font-size: .4em;
+  line-height: 1;
+  text-shadow: 2em 1.2em #D21034;
+}
+
+.costa-rica {
+  box-shadow: 0 .15em #002B7F inset, 0 .3em #fff inset, 0 .7em #CE1126 inset, 0 .85em #fff inset, 0 1em #002B7F inset;
+}
+
+.cuba {
+  box-shadow: 0 .2em #002A8F inset, 0 .4em white inset, 0 .6em #002A8F inset, 0 .8em white inset, 0 1em #002A8F inset;
+}
+.cuba:after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  border-style: solid;
+  border-width: .5em 1em;
+  border-color: transparent transparent transparent #CE1126;
+}
+.cuba:before {
+  content: "\2605";
+  color: #fff;
+  position: absolute;
+  font-size: .5em;
+  line-height: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: .1em;
+}
+
+.guatemala {
+  box-shadow: .53em 0 #4897D2 inset, 1.06em 0 white inset, 1.6em 0 #4897D2 inset;
+}
+
+.nicaragua {
+  box-shadow: 0 .33em #0146E2 inset, 0 .66em #fff inset, 0 1em #0146E2 inset;
+}
+
+.el-salvador {
+  box-shadow: 0 .33em #01209F inset, 0 .66em #fff inset, 0 1em #01209F inset;
+}
+
+.honduras {
+  box-shadow: 0 .28em #0047BA inset, 0 .72em #fff inset, 0 1em #0047BA inset;
+}
+.honduras:after {
+  content: "\2605";
+  color: #0047BA;
+  font-size: .2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+  text-shadow: 1.5em -.5em, 1.5em .5em, -1.5em -.5em, -1.5em .5em;
+}
+
+.puerto-rico {
+  box-shadow: 0 .2em #0050F0 inset, 0 .4em white inset, 0 .6em #0050F0 inset, 0 .8em white inset, 0 1em #0050F0 inset;
+}
+.puerto-rico:after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  border-style: solid;
+  border-width: .5em 1em;
+  border-color: transparent transparent transparent #ED0000;
+}
+.puerto-rico:before {
+  content: "\2605";
+  color: #fff;
+  position: absolute;
+  font-size: .5em;
+  line-height: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: .1em;
+}
+
+.flag.republica-dominicana {
+  background: #fff;
+}
+.flag.republica-dominicana:before {
+  background: #043256;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: .7em;
+  height: .4em;
+  content: "";
+  box-shadow: .9em .6em #043256, .9em 0 #F50204, 0 .6em #F50204;
+}
+
+.jamaica {
+  background: #F9DA00;
+  overflow: hidden;
+}
+.jamaica:after {
+  position: absolute;
+  content: "";
+  width: .6em;
+  height: .5em;
+  background: #000;
+  top: 50%;
+  left: -20%;
+  transform: translateY(-50%) rotate(-30deg) skew(32deg) scale(1.3);
+  box-shadow: .7em .63em #000, .77em -.03em #00B240, -0.05em .65em #00B240;
+}
+
+.haiti {
+  box-shadow: 0 .5em #D31134 inset, 0 1em #01209F inset;
+}
+.haiti:before {
+  content: "";
+  background: #fff;
+  width: .4em;
+  height: .3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.haiti:after {
+  content: "\1F334";
+  color: green;
+  font-size: .2em;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: .3em 0, -.3em 0;
+}
+
+.canada {
+  box-shadow: .4em 0 red inset, 1.2em 0 white inset, 1.6em 0 red inset;
+}
+
+.turkey {
+  background: #E30A17;
+}
+.turkey:before {
+  content: "";
+  position: absolute;
+  top: .25em;
+  left: .4em;
+  width: .5em;
+  height: .5em;
+  background: #E30A17;
+  border-radius: 50%;
+  box-shadow: -.05em -.05em 0 .04em #fff;
+  transform: rotate(-50deg);
+}
+.turkey:after {
+  content: "\2605";
+  color: #fff;
+  position: absolute;
+  font-size: .4em;
+  line-height: 1;
+  left: 1.8em;
+  top: 50%;
+  transform: translateY(-50%) rotate(-15deg);
+}
